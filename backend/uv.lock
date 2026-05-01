@@ -1,0 +1,67 @@
+version = 1
+revision = 3
+requires-python = ">=3.13"
+
+[[package]]
+name = "asgiref"
+version = "3.11.1"
+source = { registry = "http://packages.webflare.ru/simple" }
+sdist = { url = "https://packages.webflare.ru/download/asgiref/3.11.1/asgiref-3.11.1.tar.gz" }
+wheels = [
+    { url = "https://packages.webflare.ru/download/asgiref/3.11.1/asgiref-3.11.1-py3-none-any.whl" },
+]
+
+[[package]]
+name = "backend"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "djangorestframework" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "djangorestframework", specifier = ">=3.17.1" }]
+
+[[package]]
+name = "django"
+version = "6.0.4"
+source = { registry = "http://packages.webflare.ru/simple" }
+dependencies = [
+    { name = "asgiref" },
+    { name = "sqlparse" },
+    { name = "tzdata", marker = "sys_platform == 'win32'" },
+]
+sdist = { url = "https://packages.webflare.ru/download/django/6.0.4/django-6.0.4.tar.gz" }
+wheels = [
+    { url = "https://packages.webflare.ru/download/django/6.0.4/django-6.0.4-py3-none-any.whl" },
+]
+
+[[package]]
+name = "djangorestframework"
+version = "3.17.1"
+source = { registry = "http://packages.webflare.ru/simple" }
+dependencies = [
+    { name = "django" },
+]
+sdist = { url = "https://packages.webflare.ru/download/djangorestframework/3.17.1/djangorestframework-3.17.1.tar.gz" }
+wheels = [
+    { url = "https://packages.webflare.ru/download/djangorestframework/3.17.1/djangorestframework-3.17.1-py3-none-any.whl" },
+]
+
+[[package]]
+name = "sqlparse"
+version = "0.5.5"
+source = { registry = "http://packages.webflare.ru/simple" }
+sdist = { url = "https://packages.webflare.ru/download/sqlparse/0.5.5/sqlparse-0.5.5.tar.gz" }
+wheels = [
+    { url = "https://packages.webflare.ru/download/sqlparse/0.5.5/sqlparse-0.5.5-py3-none-any.whl" },
+]
+
+[[package]]
+name = "tzdata"
+version = "2026.2"
+source = { registry = "http://packages.webflare.ru/simple" }
+sdist = { url = "https://packages.webflare.ru/download/tzdata/2026.2/tzdata-2026.2.tar.gz" }
+wheels = [
+    { url = "https://packages.webflare.ru/download/tzdata/2026.2/tzdata-2026.2-py2.py3-none-any.whl" },
+]
